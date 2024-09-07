@@ -1,3 +1,80 @@
+:root {
+    --sidebarcolor: hsl(218, 29%, 53%);
+    --headercolor: hsl(219, 46%, 64%);
+    --maincolor: hsl(218, 37%, 74%);
+}
+
 * {
-    margin: 0;
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(320px, 400px)) 6fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: var(--sidebarcolor);
+    grid-row: span 2;
+}
+
+.header {
+    background-color: var(--headercolor);
+}
+
+.main {
+    background-color: var(--maincolor);
+}
+
+.sidebar, .header, .main {
+    padding: 20px;
+}
+
+img[src$=".svg"] {
+    width: 40px;
+    height: 40px;
+}
+
+img[src="src/view-dashboard.svg"] {
+    width: 80px;
+    height: 80px;
+}
+
+/* <-> */
+
+.sidebarTitle {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    gap: 8px;
+    padding-bottom: 40px;
+}
+
+.sidebarList1, .sidebarList2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 34px;
+}
+
+.sidebarList1 > *, .sidebarList2 > * {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    gap: 20px;
+}
+
+.sidebarList1 img, p:hover, .sidebarList2 img, p:hover {
+    cursor: pointer;
+}
+
+.sidebarList1 {
+    padding-bottom: 80px;
 }
